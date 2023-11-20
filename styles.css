@@ -1,3 +1,8 @@
+:root {
+    --grid-cell-width: 100px;  
+    --grid-cell-height: 100px; 
+}
+
 header {
     height: 80px;
     display: flex;
@@ -32,8 +37,26 @@ section {
 }
 
 #sketch-container {
-    padding: 10px;
     border: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+    align-content: flex-start; /* Aligns rows to the start without gaps */
+}
+
+.grid-cell {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+    width: var(--grid-cell-width);
+    height: var(--grid-cell-height);
+    box-sizing: border-box;
+    transition: background-color 0.6s;
+}
+
+.grid-cell:hover {
+    background-color: red; /* Color when mouse hovers over */
 }
 
 footer {
