@@ -41,6 +41,8 @@ section {
     display: flex;
     flex-wrap: wrap;
     padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
     align-content: flex-start; /* Aligns rows to the start without gaps */
 }
 
@@ -52,11 +54,15 @@ section {
     width: var(--grid-cell-width);
     height: var(--grid-cell-height);
     box-sizing: border-box;
-    transition: background-color 0.6s;
+    transition: background-color 1.5s;
 }
 
 .grid-cell:hover {
     background-color: red; /* Color when mouse hovers over */
+}
+
+.clicked-grid-cell {
+    background-color: rgb(4, 0, 255); /* Color when mouse hovers over */
 }
 
 footer {
