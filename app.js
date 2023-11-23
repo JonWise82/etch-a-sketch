@@ -42,6 +42,8 @@ function retrieveSketchContainerDimensions () {
 //Controller - listens to events
 const gridButton = document.getElementById('create-grid');
 const sketchContainer = document.getElementById("sketch-container");
+const colourPallette = document.querySelector(".colour-pallete");
+let colourChoice = "red";
 
 //Generate grid button
 gridButton.addEventListener('click', () => {    
@@ -51,5 +53,18 @@ gridButton.addEventListener('click', () => {
 })
    
 function handleClick(event) {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = colourChoice;
 }
+
+//obtain colour
+colourPallette.addEventListener('click', (event) => {
+    if (event.target.matches('#red')) {
+        colourChoice = "red";
+    }
+    if (event.target.matches('#orange')) {
+        colourChoice = "orange";
+    }
+    if (event.target.matches('#blue')) {
+        colourChoice = "blue";
+    }
+})

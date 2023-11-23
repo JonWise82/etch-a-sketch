@@ -22,6 +22,11 @@ nav, footer {
     background-color: rgb(234, 239, 240);
 }
 
+#colours {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
 #main-container {
     display: flex;
     height: 600px; 
@@ -31,9 +36,30 @@ section {
     flex-grow: 1;
 }
 
-#colour-picker {
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 200px;
+}
+
+.colour-picker {
+    border: 1px solid black;
+    width: 15px;
+    height: 15px;
+    margin: 10px;
+}
+
+#red {
+    background-color: red;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#blue {
+    background-color: blue;
 }
 
 #sketch-container {
@@ -54,11 +80,11 @@ section {
     width: var(--grid-cell-width);
     height: var(--grid-cell-height);
     box-sizing: border-box;
-    transition: background-color 1.5s;
+    transition: background-color 0.9s;
 }
 
 .grid-cell:hover {
-    background-color: red; /* Color when mouse hovers over */
+    background-color: rgb(80, 77, 77); /* Color when mouse hovers over */
 }
 
 footer {
