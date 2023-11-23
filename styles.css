@@ -48,7 +48,7 @@ section {
 
 .grid-cell {
     background-color: rgb(255, 255, 255);
-    border: 1px solid black;
+    border: 0.5px solid black;
     margin: 0px;
     padding: 0px;
     width: var(--grid-cell-width);
@@ -59,10 +59,6 @@ section {
 
 .grid-cell:hover {
     background-color: red; /* Color when mouse hovers over */
-}
-
-.clicked-grid-cell {
-    background-color: rgb(4, 0, 255); /* Color when mouse hovers over */
 }
 
 footer {
