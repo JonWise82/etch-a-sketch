@@ -41,8 +41,10 @@ function retrieveSketchContainerDimensions () {
 
 //Controller - listens to events
 const gridButton = document.getElementById('create-grid');
+const clearGridButton = document.getElementById('clear-grid');
 const sketchContainer = document.getElementById("sketch-container");
 const colourPallette = document.querySelector(".colour-pallete");
+const colourChoiceDisplay = document.getElementById('colour-choice');
 let colourChoice = "red";
 
 //Generate grid button
@@ -50,6 +52,10 @@ gridButton.addEventListener('click', () => {
     sketchContainer.innerHTML = "";
     const gridSizeInput = +document.getElementById('input-grids').value;
     createGrid(gridSizeInput, retrieveSketchContainerDimensions());
+})
+
+clearGridButton.addEventListener('click', () => {    
+    sketchContainer.innerHTML = "";
 })
    
 function handleClick(event) {
@@ -60,11 +66,14 @@ function handleClick(event) {
 colourPallette.addEventListener('click', (event) => {
     if (event.target.matches('#red')) {
         colourChoice = "red";
+        colourChoiceDisplay.style.backgroundColor = colourChoice;
     }
     if (event.target.matches('#orange')) {
         colourChoice = "orange";
+        colourChoiceDisplay.style.backgroundColor = colourChoice;
     }
     if (event.target.matches('#blue')) {
         colourChoice = "blue";
+        colourChoiceDisplay.style.backgroundColor = colourChoice;
     }
 })

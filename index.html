@@ -13,9 +13,16 @@
         </h1>
     </header>
     <nav>
-        <input type="text" id="input-grids" name="inputGrids" 
-        placeholder="Enter square grid dimension">
-        <button id="create-grid" type="submit">Create Grid</button>
+        <div class="header-lhs">
+            <input type="text" id="input-grids" name="inputGrids" 
+            placeholder="Enter square grid dimension">
+            <button id="create-grid" type="submit">Create Grid</button>
+            <button id="clear-grid" type="submit">Clear Grid</button>
+        </div>
+        <div class ="header-rhs">
+            <div>Colour Choice</div>
+            <div id="colour-choice"></div>
+        </div>
     </nav>
     <div id="main-container">
         <aside class="colour-pallete">

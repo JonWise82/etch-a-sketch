@@ -3,6 +3,10 @@
     --grid-cell-height: 100px; 
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 header {
     height: 80px;
     display: flex;
@@ -10,16 +14,21 @@ header {
     justify-content: center;
     background-color: rgb(224, 141, 130);
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 nav, footer {
     height:50px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding: 10px;
     background-color: rgb(234, 239, 240);
+}
+
+.header-rhs {
+    display: flex;
+    align-items: center;
 }
 
 #colours {
@@ -37,17 +46,35 @@ section {
 }
 
 aside {
+    width:200px;
     display: flex;
     flex-direction: column;
-    align-items:center;
-    width: 200px;
+    align-items: center
 }
 
 .colour-picker {
-    border: 1px solid black;
-    width: 15px;
-    height: 15px;
-    margin: 10px;
+    border: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    margin: 30px 30px 0px 30px;
+}
+
+aside h3 {
+    margin: 30px 0px 0px 0px;
+}
+
+.colour-picker:hover {    
+    transform: scale(1.2);
+}
+
+#colour-choice {
+    background-color: red;
+    border: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    margin: 0px 0px 0px 20px;
 }
 
 #red {
