@@ -26,7 +26,6 @@ function createGrid (gridSizeInput, containerDimensions) {
 
 function retrieveSketchContainerDimensions () {
     const style = window.getComputedStyle(sketchContainer);
-    
     const totalWidth = parseFloat(style.width);
     const totalHeight = parseFloat(style.height);    
     const borderTop = parseFloat(style.borderTopWidth);
@@ -37,6 +36,13 @@ function retrieveSketchContainerDimensions () {
     const sketchContainerWidth = totalWidth - borderLeft - borderRight;
     const sketchContainerHeight = totalHeight - borderTop - borderBottom;
     return [sketchContainerWidth, sketchContainerHeight];
+}
+
+function getRandomRGBString() {
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+    return `rgb(${red},${green},${blue})`;
 }
 
 //Controller - listens to events
@@ -55,7 +61,10 @@ gridButton.addEventListener('click', () => {
 })
 
 clearGridButton.addEventListener('click', () => {    
-    sketchContainer.innerHTML = "";
+    let elements = document.querySelectorAll(".grid-cell");
+    elements.forEach(function(el) {
+        el.style.backgroundColor = "transparent";
+    })
 })
    
 function handleClick(event) {
@@ -74,6 +83,10 @@ colourPallette.addEventListener('click', (event) => {
     }
     if (event.target.matches('#blue')) {
         colourChoice = "blue";
+        colourChoiceDisplay.style.backgroundColor = colourChoice;
+    }
+    if (event.target.matches('#random')) {
+        colourChoice = getRandomRGBString();
         colourChoiceDisplay.style.backgroundColor = colourChoice;
     }
 })

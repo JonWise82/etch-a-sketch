@@ -89,14 +89,40 @@ aside h3 {
     background-color: blue;
 }
 
-#sketch-container {
+#random {
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+
+@media only screen and (max-width: 640px) {
+    #sketch-container {
     border: 3px solid black;
     display: flex;
     flex-wrap: wrap;
+    flex-grow: 0;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
     align-content: flex-start; /* Aligns rows to the start without gaps */
+    width: 300px; 
+    height: 300px; 
+    margin-top: 30px;
+}
+}
+
+@media  only screen and (min-width: 641px) and (max-width: 1200px) {
+    #sketch-container {
+    border: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    align-content: flex-start; /* Aligns rows to the start without gaps */
+    width: 500px; 
+    height: 500px; 
+    margin-top: 30px;   
+}
 }
 
 .grid-cell {
