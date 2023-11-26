@@ -45,13 +45,6 @@ section {
     flex-grow: 1;
 }
 
-aside {
-    width:200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center
-}
-
 .colour-picker {
     border: 0px;
     width: 50px;
@@ -104,12 +97,19 @@ aside h3 {
     box-sizing: border-box;
     align-content: flex-start; /* Aligns rows to the start without gaps */
     width: 300px; 
-    height: 300px; 
+    height: 450px; 
     margin-top: 30px;
 }
+
+    aside {
+        width: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
 }
 
-@media  only screen and (min-width: 641px) and (max-width: 1200px) {
+@media  only screen and (min-width: 641px) {
     #sketch-container {
     border: 3px solid black;
     display: flex;
@@ -119,10 +119,18 @@ aside h3 {
     margin: 0px;
     box-sizing: border-box;
     align-content: flex-start; /* Aligns rows to the start without gaps */
-    width: 500px; 
-    height: 500px; 
+    width: 600px; 
+    height: 550px; 
     margin-top: 30px;   
 }
+
+aside {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
 }
 
 .grid-cell {
