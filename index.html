@@ -14,8 +14,8 @@
     </header>
     <nav>
         <div class="header-lhs">
-            <input type="text" id="input-grids" name="inputGrids" 
-            placeholder="Enter number of grids wide">
+            <input type="range" min="0" max="30" value="50" id="input-slider">
+            <p>No. Cells Wide: <span id="slider-value">50</span></p>
             <button id="create-grid" type="submit">Create Grid</button>
             <button id="clear-grid" type="submit">Clear Grid</button>
         </div>
@@ -26,7 +26,7 @@
     </nav>
     <div id="main-container">
         <aside class="colour-pallete">
-            <h3>Colour Picker<h3>
+            <p>Colour Picker</p>
             <div id="red" class="colour-picker"></div>
             <div id="orange" class="colour-picker"></div>
             <div id="blue" class="colour-picker"></div>

@@ -1,10 +1,4 @@
-//Model - application logic
-
-    
-
-
-//View - manipulate DOM
-function createGrid (gridSizeInput, containerDimensions) {    
+ function createGrid (gridSizeInput, containerDimensions) {    
     const cellWidth = containerDimensions[0] / gridSizeInput;
     const noRows = Math.floor(containerDimensions[1] / cellWidth);
     const cellWidthProperty = `${cellWidth}px`;
@@ -51,12 +45,21 @@ const clearGridButton = document.getElementById('clear-grid');
 const sketchContainer = document.getElementById("sketch-container");
 const colourPallette = document.querySelector(".colour-pallete");
 const colourChoiceDisplay = document.getElementById('colour-choice');
+const slider = document.getElementById("input-slider");
+const sliderValue = document.getElementById("slider-value");
+
+// Update the span with the slider's value when it changes
+slider.addEventListener("input", function() {
+    sliderValue.textContent = slider.value;
+});
+
+
 let colourChoice = "red";
 
 //Generate grid button
 gridButton.addEventListener('click', () => {    
     sketchContainer.innerHTML = "";
-    const gridSizeInput = +document.getElementById('input-grids').value;
+    const gridSizeInput = slider.value;
     createGrid(gridSizeInput, retrieveSketchContainerDimensions());
 })
 
