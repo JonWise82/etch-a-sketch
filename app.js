@@ -39,7 +39,7 @@ function getRandomRGBString() {
     return `rgb(${red},${green},${blue})`;
 }
 
-//Controller - listens to events
+//Obtain DOM elements
 const gridButton = document.getElementById('create-grid');
 const clearGridButton = document.getElementById('clear-grid');
 const sketchContainer = document.getElementById("sketch-container");
@@ -90,6 +90,10 @@ colourPallette.addEventListener('click', (event) => {
     }
     if (event.target.matches('#random')) {
         colourChoice = getRandomRGBString();
+        colourChoiceDisplay.style.backgroundColor = colourChoice;
+    }
+    if (event.target.matches('#rubber')) {
+        colourChoice = "white"
         colourChoiceDisplay.style.backgroundColor = colourChoice;
     }
 })

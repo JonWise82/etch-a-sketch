@@ -7,14 +7,22 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(224, 141, 130);
-    color: white;
+button {
+    background-color: #007bff; 
+    color: white; 
+    border: none;
+    padding: 3px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 1px 1px;
+    cursor: pointer;
+    border-radius: 8px;
+}
 
+button:hover {
+    background-color: #0056b3;
 }
 
 nav, footer {
@@ -72,9 +80,21 @@ aside h3 {
 
 #random {
     background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    color: #ffffff;
+    text-align: center;
 }
 
 @media only screen and (max-width: 640px) {
+    header {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(224, 141, 130);
+        color: white;
+    
+    }    
+    
     #main-container {
         display: flex;
         flex-direction: column;
@@ -82,7 +102,6 @@ aside h3 {
     }    
     
     #sketch-container {
-        border: 3px solid black;
         display: flex;
         flex-wrap: wrap;
         padding: 0px;
@@ -108,24 +127,39 @@ aside h3 {
         height: 30px;
         border-radius: 8px;
     }
+
+    #random {
+        font-size: 6px;
+    }
+    
+    #rubber {
+        border: 2px solid #000000;
+    }
 }
 
 @media  only screen and (min-width: 641px) {
+    header {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(224, 141, 130);
+        color: white;
+    
+    } 
+    
     #main-container {
         display: flex;
         height: 600px; 
     }  
 
     #sketch-container {
-        border: 3px solid black;
         display: flex;
         flex-wrap: wrap;
         padding: 0px;
         margin: 0px;
         box-sizing: border-box;
         align-content: flex-start; /* Aligns rows to the start without gaps */
-        max-width: 1000px; 
-        height: 500px; 
         margin-top: 30px;   
     }
 
@@ -142,6 +176,14 @@ aside h3 {
         height: 50px;
         border-radius: 15px;
         margin: 30px 30px 0px 30px;
+    }
+
+    #random {
+        font-size: 10px;
+    }
+
+    #rubber {
+        border: 2px solid #000000;
     }
 
 }
